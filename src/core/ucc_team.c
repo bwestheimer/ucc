@@ -582,10 +582,12 @@ int ucc_team_id_pool_ffs_clear(uint64_t *value)
 
 void ucc_team_id_pool_set_bit(uint64_t *local, int id)
 {
-    /* Inverse of the layout ucc_team_alloc_id uses */
-    int map_pos = (id-1) / 64;
-    int pos = (id-1) % 64;
+    int map_pos;
+    int pos;
+
     ucc_assert(id >= 1);
+    map_pos = (id-1) / 64;
+    pos     = (id-1) % 64;
     local[map_pos] |= ((uint64_t)1 << pos);
 }
 

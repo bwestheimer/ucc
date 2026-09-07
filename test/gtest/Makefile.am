@@ -89,6 +89,7 @@ gtest_SOURCES =                           \
 	coll/test_alltoallv.cc                \
 	coll/test_allgather.cc                \
 	coll/test_allgatherv.cc               \
+	coll/test_knomial_seq.cc              \
 	coll/test_gather.cc                   \
 	coll/test_gatherv.cc                  \
 	coll/test_bcast.cc                    \
